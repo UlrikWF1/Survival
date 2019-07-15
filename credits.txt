@@ -1,0 +1,6 @@
+SCRIPTS
+
+Format.js : https://github.com/IvarK/Format.js (IvarK, aka Hevipelle)
+JQuery : https://jquery.com (I dunno, I linked it. Is that enough?)
+
+Thanks, All! :)
