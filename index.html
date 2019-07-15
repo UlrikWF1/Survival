@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <!-- Meta Information -->
+    <title>Survival</title>
+    <meta name="description" content="Survival is an incremental game made by UlrikWF1.">
+    <meta name="author" content="UlrikWF1">
+    <!-- Link Stylesheet & Game Script -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="themes/light.css" id="theme">
+    <link rel=icon href=favicon.ico>
+</head>
+<body>
+
+<div>
+    <div class="header">
+      <!-- Header -->
+      <div class="nav">
+        <!-- Navigation -->
+          <button onclick="changeMenu('resources')" class="headerbtn">
+            <span class="btn-line">Buildings</span>
+          </button>
+          <button onclick="changeMenu('research')" class="headerbtn">
+            <span class="btn-line">Research</span>
+          </button>
+          <button onclick="changeMenu('prestige')" class="headerbtn">
+            <span class="btn-line">Prestige</span>
+          </button>
+          <button onclick="changeMenu('help')" class="headerbtn">
+            <span class="btn-line">Help</span>
+          </button>
+          <button onclick="changeMenu('options')" class="headerbtn">
+            <span class="btn-line">Options</span>
+          </button>
+        </div>
+      </div>
+    <br>
+
+    <div id="resources">
+
+    <div id="tier1" class="tier">
+        <h2>Tier 1</h2>
+        <button onclick="buyItem(1, 'w')">
+            <span class="btn-line">Axes : <span id="1w">1</span></span>
+            <span class="btn-line">Cost : <span id="1wc">10</span> Wood, Stone, Food</span>
+        </button>
+        <button onclick="buyItem(1, 's')">
+            <span class="btn-line">Pickaxes : <span id="1s">1</span></span>
+            <span class="btn-line">Cost : <span id="1sc">10</span> Wood, Stone, Food</span>
+        </button>
+        <button onclick="buyItem(1, 'f')">
+            <span class="btn-line">Spears : <span id="1f">1</span></span>
+            <span class="btn-line">Cost : <span id="1fc">10</span> Wood, Stone, Food</span>
+        </button>
+        <br>
+        <button onclick="buy10Item(1, 'w')">
+            <span class="btn-line">Buy 10 Axes</span>
+            <span class="btn-line">Cost: <span id="1w10c"></span></span>
+        </button>
+        <button onclick="buy10Item(1, 's')">
+            <span class="btn-line">Buy 10 Pickaxes</span>
+            <span class="btn-line">Cost: <span id="1s10c"></span></span>
+        </button>
+        <button onclick="buy10Item(1, 'f')">
+            <span class="btn-line">Buy 10 Spears</span>
+            <span class="btn-line">Cost: <span id="1f10c"></span></span>
+        </button>
+    </div>
+
+    <br>
+
+    <div id="tier2" class="tier">
+        <h2>Tier 2</h2>
+        <button onclick="buyItem(2, 'w')">
+            <span class="btn-line">Lumberjacks : <span id="2w">0</span></span>
+            <span class="btn-line">Cost : <span id="2wc">1000</span> Stone, Food</span>
+        </button>
+        <button onclick="buyItem(2, 's')">
+            <span class="btn-line">Miners : <span id="2s">0</span></span>
+            <span class="btn-line">Cost : <span id="2sc">1000</span> Wood, Food</span>
+        </button>
+        <button onclick="buyItem(2, 'f')">
+            <span class="btn-line">Hunters : <span id="2f">0</span></span>
+            <span class="btn-line">Cost : <span id="2fc">1000</span> Wood, Stone</span>
+        </button>
+        <br>
+        <button onclick="buy10Item(2, 'w')">
+            <span class="btn-line">Buy 10 Lumberjacks</span>
+            <span class="btn-line">Cost: <span id="2w10c"></span></span>
+        </button>
+        <button onclick="buy10Item(2, 's')">
+            <span class="btn-line">Buy 10 Miners</span>
+            <span class="btn-line">Cost: <span id="2s10c"></span></span>
+        </button>
+        <button onclick="buy10Item(2, 'f')">
+            <span class="btn-line">Buy 10 Hunters</span>
+            <span class="btn-line">Cost: <span id="2f10c"></span></span>
+        </button>
+    </div>
+
+    <br>
+
+    <div id="tier3" class="tier">
+        <h2>Tier 3</h2>
+        <button onclick="buyItem(3, 'w')">
+            <span class="btn-line">Forests : <span id="3w">0</span></span>
+            <span class="btn-line">Cost : <span id="3wc">1000000</span> Wood, Food</span>
+        </button>
+        <button onclick="buyItem(3, 's')">
+            <span class="btn-line">Quarries : <span id="3s">0</span></span>
+            <span class="btn-line">Cost : <span id="3sc">1000000</span> Stone, Food,</span>
+        </button>
+        <button onclick="buyItem(3, 'f')">
+            <span class="btn-line">Farms : <span id="3f">0</span></span>
+            <span class="btn-line">Cost : <span id="3fc">1000000</span> Wood, Food</span>
+        </button>
+        <br>
+        <button onclick="buy10Item(3, 'w')">
+            <span class="btn-line">Buy 10 Forests</span>
+            <span class="btn-line">Cost: <span id="3w10c"></span></span>
+        </button>
+        <button onclick="buy10Item(3, 's')">
+            <span class="btn-line">Buy 10 Quarries</span>
+            <span class="btn-line">Cost: <span id="3s10c"></span></span>
+        </button>
+        <button onclick="buy10Item(3, 'f')">
+            <span class="btn-line">Buy 10 Farms</span>
+            <span class="btn-line">Cost: <span id="3f10c"></span></span>
+        </button>
+    </div>
+
+    </div>
+
+    <div id="research">
+
+      <h1>Research</h1>
+
+      <h3>You Have <span id="researchamt">0</span> Research Points.</h3>
+
+      <button onclick="researchtrade()">
+        <span id="btn-line">5 Prestige Points -> 1 Research</span>
+      </button>
+
+      <br> <br>
+
+      <!--
+      <button id="researchproj" onclick="research()">
+        <span id="researchDescription" class="btn-line">5x Tier 1 Production</span>
+        <span class="btn-line">Cost: <span id="researchCost">1</span> Research</span>
+      </button>
+      -->
+
+    </div>
+
+    <div id="prestige">
+
+    <h1>Prestige</h1>
+
+    <p>
+      Prestige to gain prestige points that you can spend on new features, or get multipliers.
+    </p>
+
+    <p>
+      <span id="rescourcesUntilUnclaimed">5000</span> More rescources until your next unclaimed Prestige Point.
+    </p>
+
+    <div>
+        <button onclick="prestige()">
+            <span class="btn-line">Prestige to claim <span id="presNum">0</span> Prestige points.</span>
+            <span class="btn-line">(You currently have <span id="presCurrent">0</span>.)</span>
+        </button>
+    </div>
+
+    </div>
+
+    <div id="help">
+
+      <h1>Help</h1>
+
+      <div>
+
+          <h2>I have no clue what an incremental game is, why am I here</h2>
+          <p class="helptext">
+            Welcome! I'm glad you made the choice to play this. First, Let's start with resources. In the bottom left, you should see an amounts tab, containing <em><b>Wood, Stone & Food.</b></em>
+            These are the heart of the game. Your goal is to get them as high as possible, with no end. Now, let's wait until you have 30 wood, stone, and food and then go to resources and purchase an axe, a pickaxe, and a spear. You started with one each, so you should now be getting 2 of each per second, split into 200ms gaps.
+            <br> <!-- hmu Yhvr#0001 if you have a problem with this <br> tag -->
+            By the way, prestige is used as a term where you reset almost everything or everything, to gain a multiplier, helping you reach bigger numbers faster.
+          </p>
+
+          <h2>Prestige</h2>
+          <p class="helptext">
+              You need a total of 5000 of resources in this prestige to gain an unclaimed prestige point. After that goal if reached, the total of rescources goes back to 0, and the required amount increases by x1.25.
+          </p>
+      </div>
+
+    </div>
+
+    <div id="options">
+        <h1>Options</h1>
+        <h2>Display</h2>
+        <button onclick="theme()">
+          <span class="btn-line">Change Theme</span>
+          <span class="btn-line" id="currentTheme">Currently: Light</span>
+        </button>
+        <h2>Saving</h2>
+        <button onclick="save()">
+            <span class="btn-line">Save Game</span>
+            <span class="btn-line">Autosave every 15s</span>
+
+        </button>
+        <button onclick="resetGame()">
+            <span class="btn-line">Reset Game</span>
+            <span class="btn-line">(All of it.)</span>
+        </button>
+    </div>
+</div>
+
+<div id="amt">
+  <p class="coolcss">Amounts</p> <br>
+  <p class="coolcss2">Wood: <span id="wood" class="amt amtt">0</span> <br>
+  Stone: <span id="stone" class="amt amtt">0</span> <br>
+  Food: <span id="food" class="amt amtt">0</span></p> <br>
+</div>
+
+<!-- JS -->
+<script type="text/javascript" src="format.js"></script>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="loading.js"></script>
+<script type="text/javascript" src="research.js"></script>
+</body>
+</html>

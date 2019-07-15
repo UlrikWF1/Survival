@@ -1,0 +1,182 @@
+html, body {
+  height: 100%;
+}
+
+body{
+    /* Background color and default font */
+    background: white;
+    font-family: sans-serif, sans-serif;
+    margin: 0;
+}
+
+p, h1, h2, h3 {
+    color: black;
+}
+
+div {
+    text-align: center;
+}
+
+/* Span lines for the button instead of using <br> */
+span.btn-line{
+    display: block;
+}
+
+button {
+    border-radius: 3px;
+    /* Remove blue glow from button */
+    outline: none;
+    /* Set text and background colors */
+    color: #000;
+    background: #fff;
+    /* Use pointer cursor */
+    cursor: pointer;
+}
+
+/* Apply this style while the button is clicked */
+button:active{
+    border-top: solid 2px #8f8f8f;
+    border-left: solid 2px #8f8f8f;
+}
+
+.headerbtn {
+  font-size: 15px;
+  color: black;
+  background: white;
+  width: 125px;
+  height: 25px;
+  border-radius: 5px;
+  border-color: darkgray;
+  border-width: thin;
+  overflow: hidden;
+}
+
+.headerbtn:active{
+    border-top: solid thin darkgray;
+    border-left: solid thin darkgray;
+}
+
+.helptext {
+    padding: 0 25%;
+}
+
+.header {
+  position: fixed;
+  overflow: hidden;
+  padding: 10px;
+  border-bottom: thin solid;
+  border-color: darkgray;
+  width: 100%;
+  background-color: white;
+}
+
+#amt {
+  display: inline-block;
+  float: left;
+  text-align: left;
+  color: black;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-family: monospace;
+  margin-right: 25px;
+  border: solid thin darkgray;
+  position: sticky;
+  top: 100%;
+  bottom: 0px;
+  width: 75%;
+  overflow: visible;
+}
+
+.nav {
+  display: inline-block;
+  float: left;
+  text-align: center;
+  color: white;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-family: monospace;
+  line-height: 32px;
+}
+
+.subheader {
+  margin-top: 13px;
+  position: fixed;
+  overflow: hidden;
+  padding: 10px;
+  border-bottom: thin solid;
+  border-color: darkgray;
+  width: 100%;
+}
+
+.subnav {
+  display: inline-block;
+  float: left;
+  text-align: center;
+  color: white;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-family: monospace;
+  line-height: 32px;
+}
+
+.subheaderbtn {
+  font-size: 15px;
+  color: black;
+  width: 100px;
+  height: 20px;
+  border-radius: 5px;
+  border-color: darkgray;
+  border-width: thin;
+  overflow: hidden;
+}
+
+.subheaderbtn:active{
+    border-top: solid thin darkgray;
+    border-left: solid thin darkgray;
+}
+
+.tier {
+  margin-top: 85px;
+}
+
+#resources {
+  display: inline-block;
+}
+
+#resources, #prestige, #help, #options, #research {
+  margin-top: 25px;
+  width: 100%;
+}
+
+#prestige, #help, #options, #research {
+  display: none;
+}
+
+.amtt {
+  margin: 0 5px;
+}
+
+.metalimg {
+  visibility: hidden;
+}
+
+.coolcss {
+  margin-top: -10px;
+  margin-left: 10px;
+  background: white;
+  width: 65px;
+  text-align: center;
+}
+
+.coolcss2 {
+  margin: 0px;
+  margin-top: -15px;
+  margin-left: 10px;
+}
+
+/****************
+*Jeez, something*
+* new each versi*
+*on? this is har*
+*d! /s    -Yhvr *
+****************/
