@@ -25,3 +25,6 @@ function buyResearchItem(cost, tier, mult, id) {
 addResearchItem("3x Tier 1 Production", 1, "t1", 3, "r1")
 addResearchItem("3x Tier 2 Production", 3, "t2", 3, "r2")
 addResearchItem("3x Tier 3 Production", 5, "t3", 3, "r3")
+addResearchItem("5x Tier 1 Production", 3, "t1", 5, "r4")
+addResearchItem("5x Tier 2 Production", 5, "t2", 5, "r5")
+addResearchItem("5x Tier 3 Production", 7, "t3", 5, "r6")
